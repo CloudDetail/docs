@@ -36,12 +36,18 @@ const sidebars = {
     {
       type: 'category',
       label: 'Quick-Start Guide',
+      link: {
+        type: 'generated-index',
+      },
       collapsed: false,
       items: ['Quick-Start Guide/Quick-Start'],
     },
     {
       type: 'category',
       label: 'Installation',
+      link: {
+        type: 'generated-index',
+      },
       collapsed: false,
       items: [
         'Installation/Install APO Server',
@@ -51,6 +57,9 @@ const sidebars = {
     {
       type: 'category',
       label: 'Configuration',
+      link: {
+        type: 'generated-index',
+      },
       collapsed: false,
       items: [
         'Configuration/ConfigurationTest'

@@ -2,5 +2,4 @@
 slug: /
 ---
 
-
 # What is APO?
