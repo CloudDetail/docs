@@ -32,15 +32,26 @@ const sidebars = {
    */
   
   apoDocsSidebar: [
-    'Intro',
     {
       type: 'category',
-      label: 'Quick-Start Guide',
+      label: 'About APO',
       link: {
         type: 'generated-index',
       },
       collapsed: false,
-      items: ['Quick-Start Guide/Quick-Start'],
+      items: [
+        'About APO/Introduction to APO',
+        'About APO/APO Architecture',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Quick Start Guide',
+      link: {
+        type: 'generated-index',
+      },
+      collapsed: false,
+      items: ['Quick Start Guide/Quick Start'],
     },
     {
       type: 'category',
@@ -62,7 +73,28 @@ const sidebars = {
       },
       collapsed: false,
       items: [
-        'Configuration/ConfigurationTest'
+        'Configuration/Configuration external Database',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Operations and Troubleshooting',
+      link: {
+        type: 'generated-index',
+      },
+      collapsed: false,
+      items: [
+        'Operations and Troubleshooting/APO Service Overview No Data Troubleshooting',
+        {
+          type: 'category',
+          label: 'FAQ',
+          link: {
+            type: 'generated-index',
+          },
+          items: [
+            'Operations and Troubleshooting/FAQ/FAQTest',
+          ],
+        },
       ],
     },
   ],
