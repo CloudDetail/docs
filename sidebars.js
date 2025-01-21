@@ -40,19 +40,11 @@ const sidebars = {
       },
       collapsed: false,
       items: [
-        'About APO/Introduction to APO',
-        'About APO/APO Architecture',
+        'About APO/What is APO',
+        'About APO/Architecture',
       ],
     },
-    {
-      type: 'category',
-      label: 'Quick Start Guide',
-      link: {
-        type: 'generated-index',
-      },
-      collapsed: false,
-      items: ['Quick Start Guide/Quick Start'],
-    },
+    'Quick Start',
     {
       type: 'category',
       label: 'Installation',
@@ -61,40 +53,103 @@ const sidebars = {
       },
       collapsed: false,
       items: [
-        'Installation/Install APO Server',
-        'Installation/Install APO OneAgent',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Configuration',
-      link: {
-        type: 'generated-index',
-      },
-      collapsed: false,
-      items: [
-        'Configuration/Configuration external Database',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Operations and Troubleshooting',
-      link: {
-        type: 'generated-index',
-      },
-      collapsed: false,
-      items: [
-        'Operations and Troubleshooting/APO Service Overview No Data Troubleshooting',
+        'Installation/APO Server',
+        'Installation/APO OneAgent',
         {
           type: 'category',
-          label: 'FAQ',
+          label: 'Advanced',
           link: {
             type: 'generated-index',
           },
           items: [
-            'Operations and Troubleshooting/FAQ/FAQTest',
+            'Installation/Advanced/Integrate with Existing Clickhouse',
+            'Installation/Advanced/Integrate with Existing VictoriaMetrics',
           ],
         },
+        {
+          type: 'category',
+          label: 'Additional Use Cases',
+          link: {
+            type: 'generated-index',
+          },
+          items: [
+            'Installation/Additional Use Cases/Independent Logging Module',
+            'Installation/Additional Use Cases/Independent Metrics Module',
+            'Installation/Additional Use Cases/Independent Trace Module',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Distibuted Tracing',
+      link: {
+        type: 'generated-index',
+      },
+      collapsed: false,
+      items: [
+        'Distibuted Tracing/Modify Automatic Injection Scope',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Logs Monitoring',
+      link: {
+        type: 'generated-index',
+      },
+      collapsed: false,
+      items: [
+        'Logs Monitoring/Configure Log Parsing Rules',
+        'Logs Monitoring/Full Log Collection',
+        'Logs Monitoring/Fault Log Collection',
+        'Logs Monitoring/Nginx Log Collection',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Metrics Monitoring',
+      link: {
+        type: 'generated-index',
+      },
+      collapsed: false,
+      items: [
+        'Metrics Monitoring/Elasticsearch',
+        'Metrics Monitoring/Kafka',
+        'Metrics Monitoring/MySQL',
+        'Metrics Monitoring/RabbitMQ',
+        'Metrics Monitoring/Redis',
+        'Metrics Monitoring/More',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Alerting',
+      link: {
+        type: 'generated-index',
+      },
+      collapsed: false,
+      items: [
+        'Alerting/Configure Alert Rules',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'FAQ',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'FAQ/FAQTest',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Troubleshooting',
+      link: {
+        type: 'generated-index',
+      },
+      items: [
+        'Troubleshooting/Service Overview No Data',
       ],
     },
   ],
