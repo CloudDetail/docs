@@ -42,6 +42,7 @@ const sidebars = {
       items: [
         'About APO/What is APO',
         'About APO/Architecture',
+        'About APO/test',
       ],
     },
     'Quick Start',
@@ -64,6 +65,7 @@ const sidebars = {
           items: [
             'Installation/Advanced/Integrate with Existing Clickhouse',
             'Installation/Advanced/Integrate with Existing VictoriaMetrics',
+            'Installation/Advanced/Replace OneAgent Otel Probe with Custom Tracing Probe',
           ],
         },
         {
@@ -150,6 +152,9 @@ const sidebars = {
       },
       items: [
         'Troubleshooting/Service Overview No Data',
+        'Troubleshooting/eBPF-Agent Unready Issue',
+        'Troubleshooting/Grafana-Beyla Unready Issue',
+        'Troubleshooting/Cloud provider cluster failed to create the database',
       ],
     },
   ],
