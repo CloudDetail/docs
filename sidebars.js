@@ -42,7 +42,6 @@ const sidebars = {
       items: [
         'About APO/What is APO',
         'About APO/Architecture',
-        'About APO/test',
       ],
     },
     'Quick Start',

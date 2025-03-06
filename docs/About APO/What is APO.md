@@ -60,7 +60,6 @@ Compared to other observability solutions, APO occupies less storage cost while 
 
 ## Version Differences
 
-```markdown
 <table style={{ width: "100%", textAlign: "center" }}>
   <thead>
     <tr>
@@ -72,34 +71,31 @@ Compared to other observability solutions, APO occupies less storage cost while 
   </thead>
   <tbody>
     <tr>
-      <td rowspan="3">Observability Features</td>
-      <td>Logs and all related features</td>
-      <td><img src="/img/apo/check-img.png" alt="check" width="25"/></td>
-      <td><img src="/img/apo/check-img.png" alt="check" width="25"/></td>
+      <td rowspan="3" >Observability Features</td>
+      <td>Logs and Related Features</td>
+      <td><img src="/img/check-img.png" alt="check" width="25"/></td>
+      <td><img src="/img/check-img.png" alt="check" width="25"/></td>
     </tr>
     <tr>
-      <td>Metrics and all related features</td>
-      <td><img src="/img/apo/check-img.png" alt="check" width="25"/></td>
-      <td><img src="/img/apo/check-img.png" alt="check" width="25"/></td>
+      <td>Metrics and Related Features</td>
+      <td><img src="/img/check-img.png" alt="check" width="25"/></td>
+      <td><img src="/img/check-img.png" alt="check" width="25"/></td>
     </tr>
     <tr>
-      <td>Traces and all related features</td>
-      <td><img src="/img/apo/check-img.png" alt="check" width="25"/></td>
-      <td><img src="/img/apo/check-img.png" alt="check" width="25"/></td>
+      <td>Traces and Related Features</td>
+      <td><img src="/img/check-img.png" alt="check" width="25"/></td>
+      <td><img src="/img/check-img.png" alt="check" width="25"/></td>
     </tr>
     <tr>
-      <td rowspan="2">Analytics Based on Observability Data</td>
+      <td rowspan="2" >Analytics Based on Observability Data</td>
       <td>Alert Analysis</td>
-      <td><img src="/img/apo/uncheck-img.png" alt="uncheck" width="25"/></td>
-      <td><img src="/img/apo/check-img.png" alt="check" width="25"/></td>
+      <td><img src="/img/uncheck-img.png" alt="uncheck" width="25"/></td>
+      <td><img src="/img/check-img.png" alt="check" width="25"/></td>
     </tr>
     <tr>
-      <td>Future Additional Analytics Features</td>
-      <td><img src="/img/apo/uncheck-img.png" alt="uncheck" width="25"/></td>
-      <td><img src="/img/apo/check-img.png" alt="check" width="25"/></td>
+      <td>More Analytics Features in the Future</td>
+      <td><img src="/img/uncheck-img.png" alt="uncheck" width="25"/></td>
+      <td><img src="/img/check-img.png" alt="check" width="25"/></td>
     </tr>
   </tbody>
 </table>
-```
-
-> This post is translated using ChatGPT, please [**feedback**](https://github.com/linyuxuanlin/Wiki_MkDocs/issues/new) if any omissions.

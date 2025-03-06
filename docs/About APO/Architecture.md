@@ -51,5 +51,3 @@ For readability, some components used by the APO Server are not displayed in the
 - **apo-frontend/apo-grafana** is used for visualizing data and providing a user interface for the application layer.
 - **vmalert** is used to query metrics in VictoriaMetrics and generate alerts.
 - **alertmanager** is responsible for receiving alert information and managing alerts, such as alert notifications and alert suppression.
-
-> This post is translated using ChatGPT, please [**feedback**](https://github.com/linyuxuanlin/Wiki_MkDocs/issues/new) if any omissions.
