@@ -124,7 +124,7 @@ const config = {
             items: [
               {
                 label: 'Quick Start',
-                to: '/Quick Start Guide/Quick Start',
+                to: '/Quick Start',
               },
             ],
           },

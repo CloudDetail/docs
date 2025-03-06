@@ -14,7 +14,7 @@ This document contains instructions for installing and running APO-server on a K
    - Install a Kubernetes server on your machine. For information on installing Kubernetes, refer to the official documentation [Installing Kubernetes](https://kubernetes.io/docs/setup/).
    - Install the latest stable version of Helm. For information on installing Helm, refer to [Installing Helm](https://helm.sh/docs/intro/install/).
 3. **Network Firewall Configuration:** Open the necessary ports as described in [Appendix 1: Network Port List](#appendix-1-network-port-list).
-4. If you are using a K8s cluster provided by a cloud service provider: It is recommended to follow the [Production Environment Deployment Recommendations](/docs/Installation/Advanced/) to **manage APO's ClickHouse and VictoriaMetrics** or **use non-persistent configurations**. For details, see: [Cloud Provider Cluster Database Creation Failure](/docs/Troubleshooting/Cloud%20provider%20cluster%20failed%20to%20create%20the%20database.md).
+4. If you are using a K8s cluster provided by a cloud service provider: It is recommended to follow the [Production Environment Deployment Recommendations](/category/advanced) to **manage APO's ClickHouse and VictoriaMetrics** or **use non-persistent configurations**. For details, see: [Cloud Provider Cluster Database Creation Failure](/docs/Troubleshooting/Cloud%20provider%20cluster%20failed%20to%20create%20the%20database.md).
 
 ## Setting Up the APO Helm Repository
 
@@ -63,7 +63,7 @@ kubectl get po -n apo
 
 :::info
 
-**Encountering Issues**: You can refer to [《Troubleshooting》](/docs/Troubleshooting/) for further troubleshooting, or contact us.
+**Encountering Issues**: You can refer to [《Troubleshooting》](/category/troubleshooting/) for further troubleshooting, or contact us.
 
 :::
 
@@ -81,7 +81,7 @@ You can access APO through the following methods, where `NodeIP` is the IP addre
 Please refer to the documentation to install `APO-one-agent` for monitoring servers and applications:
 - [Kubernetes Installation of OneAgent](/docs/Installation/APO%20OneAgent.md): Use Helm Chart to install and run `APO-one-agent` on Kubernetes, monitoring services within the Kubernetes cluster.
 - [Traditional Server Installation of OneAgent](/docs/Installation/APO%20OneAgent.md): Supports monitoring traditional services and services started with Docker.
-- [Production Environment Deployment Recommendations](/docs/Installation/Advanced/): Some recommended deployment configurations for deploying APO in a production environment.
+- [Production Environment Deployment Recommendations](/category/advanced): Some recommended deployment configurations for deploying APO in a production environment.
 
 ## Updates and Uninstallation
 ### Updating APO Helm Charts Configuration
