@@ -1,3 +1,7 @@
+---
+slug: /
+---
+
 **APO is divided into two parts:**
 
 - **APO-server:** The server-side component of APO.

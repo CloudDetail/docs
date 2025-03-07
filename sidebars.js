@@ -32,18 +32,18 @@ const sidebars = {
    */
   
   apoDocsSidebar: [
-    {
-      type: 'category',
-      label: 'About APO',
-      link: {
-        type: 'generated-index',
-      },
-      collapsed: false,
-      items: [
-        'About APO/What is APO',
-        'About APO/Architecture',
-      ],
-    },
+    // {
+    //   type: 'category',
+    //   label: 'About APO',
+    //   link: {
+    //     type: 'generated-index',
+    //   },
+    //   collapsed: false,
+    //   items: [
+    //     'About APO/What is APO',
+    //     'About APO/Architecture',
+    //   ],
+    // },
     'Quick Start',
     {
       type: 'category',
@@ -133,16 +133,16 @@ const sidebars = {
         'Alerting/Configure Alert Rules',
       ],
     },
-    {
-      type: 'category',
-      label: 'FAQ',
-      link: {
-        type: 'generated-index',
-      },
-      items: [
-        'FAQ/FAQTest',
-      ],
-    },
+    // {
+    //   type: 'category',
+    //   label: 'FAQ',
+    //   link: {
+    //     type: 'generated-index',
+    //   },
+    //   items: [
+    //     'FAQ/FAQTest',
+    //   ],
+    // },
     {
       type: 'category',
       label: 'Troubleshooting',

@@ -1,6 +1,6 @@
----
+<!-- ---
 slug: /
----
+--- -->
 
 ## What is AutoPilot Observability (APO)?
 - **Out-of-the-box Observability Platform**: APO is dedicated to providing a one-click installation, out-of-the-box observability platform. APO's OneAgent supports one-click, configuration-free installation of Tracing probes, enabling the collection of application fault logs, infrastructure metrics, network metrics of applications and downstream dependencies, and Kubernetes events. It also supports the collection of data such as [Polaris Causal Metrics](https://one.kindlingx.com) based on eBPF. It allows querying Tracing data using Jaeger UI and querying Metrics data from VictoriaMetrics using PromQL, which can then be displayed on Grafana.
