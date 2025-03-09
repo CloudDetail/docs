@@ -15,7 +15,7 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://docs.autopilotobservability.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -67,6 +67,17 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
+      gtag: {
+        trackingID: 'G-TZRQX2HZ37',
+        anonymizeIP: false,
+      },
+      sitemap: {
+        lastmod: 'date',
+        changefreq: 'weekly',
+        priority: 0.5,
+        ignorePatterns: ['/tags/**'],
+        filename: 'sitemap.xml',
+      }
       }),
     ],
   ],
@@ -132,13 +143,13 @@ const config = {
             title: 'Community',
             items: [
               {
-                label: 'TODO🚧',
+                label: 'GitHub',
                 href: 'https://github.com/CloudDetail/apo',
               },
-              // {
-              //   label: 'Discord',
-              //   href: 'https://discordapp.com/invite/docusaurus',
-              // },
+              {
+                label: 'Slack',
+                href: 'https://join.slack.com/t/autopilotob/shared_invite/zt-31hxqlvy8-6Z2oqLAhNGluUEf0UiJVeg',
+              },
               // {
               //   label: 'X',
               //   href: 'https://x.com/docusaurus',
@@ -148,10 +159,10 @@ const config = {
           {
             title: 'More',
             items: [
-              // {
-              //   label: 'Blog',
-              //   to: '/blog',
-              // },
+              {
+                label: 'Product',
+                href: 'https://autopilotobservability.com',
+              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/CloudDetail/apo',
@@ -159,7 +170,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} AutoPilot Observability.`,
       },
       prism: {
         theme: prismThemes.github,
