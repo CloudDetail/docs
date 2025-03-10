@@ -118,7 +118,6 @@ helm upgrade apo apo/apo -n apo \
 # apoServerIP is the ClusterIP where APO-server is located
 global:
   apoServerIP: x.x.x.x # FIXME
-```
 
 # APO-one-agent Enabled Flag, Default is false
 odigos:
@@ -221,17 +220,14 @@ data:
         deployment/apo-java-demo: enabled
       # default:
       #   deploymen/demo: disabled
-```
-
-```markdown
-# instrument-all-namespace Whether to inject all namespaces
-# Equivalent to setting enabledFuture for all namespaces
-# However, if a namespace or workload has already been set to disabled, it will not be injected
-instrument-all-namespace: false
-# force-instrument-all-namespace Whether to forcibly inject all namespaces
-# Similar to instrument-all-namespace, sets enabledFuture for all namespaces
-# and ignores all disabled settings
-force-instrument-all-namespace: false
+      # instrument-all-namespace Whether to inject all namespaces
+      # Equivalent to setting enabledFuture for all namespaces
+      # However, if a namespace or workload has already been set to disabled, it will not be injected
+      instrument-all-namespace: false
+      # force-instrument-all-namespace Whether to forcibly inject all namespaces
+      # Similar to instrument-all-namespace, sets enabledFuture for all namespaces
+      # and ignores all disabled settings
+      force-instrument-all-namespace: false
 ```
 
 After saving your changes, use the following command to restart the component for the changes to take effect:

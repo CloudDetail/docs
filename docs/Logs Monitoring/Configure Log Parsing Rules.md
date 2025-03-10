@@ -48,4 +48,4 @@ Please enter the log parsing rule in [VRL Playground](https://playground.vrl.dev
 ![img-1](/img/Configure%20Log%20Parsing%20Rules%20img-1.png)
 
 ## 4. Add to APO Rule Parsing After Successful Verification
-![img-2](/img/Configure%20Log%20Parsing%20Rules%20img-2.png)
+![img-2](/img/Configure%20Log%20Parsing%20Rules%20img-2.jpg)
