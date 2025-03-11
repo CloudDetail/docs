@@ -43,7 +43,8 @@ jobs:
           ssh -p $PORT -i "$SSH_DIR/id_rsa" -o UserKnownHostsFile="$SSH_DIR/known_hosts" \
               $USER@$HOST "cd ~ && \
               tar czf docs_backup_$(date +%Y%m%d_%H%M%S).tar.gz docs/ && \
-              ls -t docs_backup_*.tar.gz | tail -n +3 | xargs rm -f || true"
+              ls -t docs_backup_*.tar.gz | tail -n +3 | xargs rm -f || true && \
+              rm -rf docs/* 2>/dev/null || true"
           
           # Deploy new files
           if ! scp -P $PORT -i "$SSH_DIR/id_rsa" -o UserKnownHostsFile="$SSH_DIR/known_hosts" \
