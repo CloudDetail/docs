@@ -1,5 +1,5 @@
 # Website
-
+[![Netlify Status](https://api.netlify.com/api/v1/badges/909afbd2-01ef-4950-88c4-8151fd4ff39e/deploy-status)](https://app.netlify.com/sites/autopilotobservability/deploys)
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
 ### Installation
