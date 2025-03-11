@@ -1,0 +1,57 @@
+name: Deploy Docusaurus
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build Docusaurus
+        run: yarn build
+
+      - name: Deploy to server
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.WEBSITE_PRIVATE_KEY }}
+          USER: ${{ secrets.WEBSITE_SSH_USER }}
+          HOST: ${{ secrets.WEBSITE_SSH_HOST }}
+          PORT: ${{ secrets.WEBSITE_SSH_PORT }}
+        run: |
+          # Create temporary SSH directory
+          SSH_DIR=$(mktemp -d)
+          echo "$SSH_PRIVATE_KEY" > "$SSH_DIR/id_rsa"
+          chmod 600 "$SSH_DIR/id_rsa"
+          
+          # Setup SSH config with strict options
+          ssh-keyscan -p $PORT -H "$HOST" > "$SSH_DIR/known_hosts"
+          
+          # Backup existing files and cleanup old backups
+          ssh -p $PORT -i "$SSH_DIR/id_rsa" -o UserKnownHostsFile="$SSH_DIR/known_hosts" \
+              $USER@$HOST "cd ~ && \
+              tar czf docs_backup_$(date +%Y%m%d_%H%M%S).tar.gz docs/ && \
+              ls -t docs_backup_*.tar.gz | tail -n +3 | xargs rm -f || true"
+          
+          # Deploy new files
+          if ! scp -P $PORT -i "$SSH_DIR/id_rsa" -o UserKnownHostsFile="$SSH_DIR/known_hosts" \
+              -r build/* $USER@$HOST:~/docs/; then
+            echo "Failed to deploy files"
+            rm -rf "$SSH_DIR"
+            exit 1
+          fi
+          
+          # Cleanup sensitive files
+          rm -rf "$SSH_DIR"
