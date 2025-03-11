@@ -89,12 +89,12 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       algolia: {
         // The application ID provided by Algolia
-        appId: 'FCSWH17CKF',
+        appId: 'NLS1JQMO0Z',
   
         // Public API key: it is safe to commit it
-        apiKey: '40db120e587fb7014caa584ad9e69b54',
+        apiKey: '25c243bd7ffc3ed28bb76caf5dda9763',
   
-        indexName: 'kindlingx',
+        indexName: 'autopilotobservability',
   
         // Optional: see doc section below
         contextualSearch: true,
