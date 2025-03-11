@@ -39,20 +39,25 @@ jobs:
           # Setup SSH config with strict options
           ssh-keyscan -p $PORT -H "$HOST" > "$SSH_DIR/known_hosts"
           
-          # Backup existing files and cleanup old backups
+          # Create temp directory on remote server and transfer new files
           ssh -p $PORT -i "$SSH_DIR/id_rsa" -o UserKnownHostsFile="$SSH_DIR/known_hosts" \
-              $USER@$HOST "cd ~ && \
-              tar czf docs_backup_$(date +%Y%m%d_%H%M%S).tar.gz docs/ && \
-              ls -t docs_backup_*.tar.gz | tail -n +3 | xargs rm -f || true && \
-              rm -rf docs/* 2>/dev/null || true"
+              $USER@$HOST "mkdir -p ~/docs_temp"
           
-          # Deploy new files
           if ! scp -P $PORT -i "$SSH_DIR/id_rsa" -o UserKnownHostsFile="$SSH_DIR/known_hosts" \
-              -r build/* $USER@$HOST:~/docs/; then
-            echo "Failed to deploy files"
-            rm -rf "$SSH_DIR"
+              -r build/* $USER@$HOST:~/docs_temp/; then
+            echo "Failed to transfer files"
+            rm -rf "$SSH_DIR" ~/docs_temp
             exit 1
           fi
+          
+          # Create backup and perform atomic directory swap
+          ssh -p $PORT -i "$SSH_DIR/id_rsa" -o UserKnownHostsFile="$SSH_DIR/known_hosts" \
+              $USER@$HOST "cd ~ && \
+              tar czf docs_backup_\$(date +%Y%m%d_%H%M%S).tar.gz docs/ && \
+              ls -t docs_backup_*.tar.gz | tail -n +3 | xargs rm -f || true && \
+              mv docs docs_old && \
+              mv docs_temp docs && \
+              rm -rf docs_old"
           
           # Cleanup sensitive files
           rm -rf "$SSH_DIR"
