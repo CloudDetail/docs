@@ -33,6 +33,9 @@ Create a file named `apo-values.yaml` and define it according to your requiremen
 # APO-server configuration
 # Persistent configuration, recommended to enable, default is false
 # If persistent configuration is enabled, create PV for the component based on PVC
+global:
+  baseURL: "http://xxx.xxx.xxx.xxx"  # FIXME, Change this to the IP address or domain name used to access the APO-server via a web browser. No port number is required. It must be the same as the node where apo-dify’s hostPath is located
+
 altinity-clickhouse-operator:
   clickhouse:
     persistence:
@@ -44,6 +47,10 @@ victoria-metrics-single:
 apo-backend:
   persistence: 
     enabled: true
+apo-dify:
+  hostPath: "/data/apo/dify"
+  nodeSelector:
+    kubernetes.io/hostname: <NODENAME>   # FIXME, The node name specified in hostPath for apo-dify.
 ```
 
 ## Deploying APO Helm Charts

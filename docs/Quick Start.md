@@ -29,8 +29,16 @@ helm repo update apo
 ## Deploying APO Helm Charts
 Run the following command to deploy `APO-server` and `APO-one-agent`.
 ```bash
+# BASEIP Change this to the IP address or domain name used to access the APO-server via a web browser. No port number is required. It must be the same as the node where apo-dify’s hostPath is located.
+# HOSTNAME The node name specified in hostPath for apo-dify.
+export BASEIP=xxx.xxx.xxx.xxx
+export NODENAME=xxxx
+
 helm install apo apo/apo -n apo --create-namespace \
 --set apo-one-agent.enabled=true
+--set apo-dify.nodeSelector={kubernetes.io/hostname: $NODENAME}
+--set global.baseURL="http://$BASEIP"
+--set apo-dify.hostPath="/data/apo/dify"
 ```
 > **Configuration 1:** By default, apo-one-agent monitors all components except for apo and Kubernetes system components. For more configurations, refer to [Modify Automatic Injection Scope](/docs/Distibuted%20Tracing/Modify%20Automatic%20Injection%20Scope.md).
 
