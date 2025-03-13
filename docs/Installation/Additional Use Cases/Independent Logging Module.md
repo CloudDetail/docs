@@ -61,7 +61,7 @@ To install APO using Helm, ensure the following tasks have been completed:
 To set up the APO Helm repository and download the correct APO Helm charts on your computer, follow these steps: **Use the following command to add the** `apo` **Helm repository**
 
 ```bash
-helm repo add apo https://apo-charts.oss-cn-hangzhou.aliyuncs.com
+helm repo add apo https://clouddetail.github.io/apo-helm-charts
 helm repo update apo
 ```
 
