@@ -19,7 +19,7 @@ When an alert is triggered, these intelligent agents take over—automatically a
 
 While fully autonomous AI agents remain APO's ultimate vision, Agentic workflows—the core feature of this release—represent the critical first step toward this revolutionary future.
 <!-- truncate -->
-## Agentic Workflows: Your Experience, the Agent's Intelligence
+## Agentic Workflows: Your Expertise, the Agent's Intelligence
 
 General-purpose LLMs are powerful but lack specialized IT knowledge. IT systems are complex and varied, making it difficult to address operational challenges with general knowledge alone.
 
@@ -35,8 +35,11 @@ Think about that experienced IT operations expert on your team who always quickl
 
 + **Quick Diagnosis of Complex Issues**: For complicated problems like "intermittent user login failures," traditional methods require team collaboration and checking potential causes one by one. APO's workflow systematically collects evidence: first checking the user service itself (finding no abnormalities), then examining dependent services (discovering occasional timeouts in the authentication service), and finally tracing the issue to increased packet loss rates on specific network paths during peak periods. The entire diagnostic process is reduced from hours to minutes.
 
+![workflows-list](/img/workflows-list.png)
 Each system environment is unique, and predefined workflows cannot cover all scenarios. Therefore, APO has built a **workflow orchestration platform** specifically for observability. Based on the popular and user-friendly AI tool Dify, APO provides a series of **data query and anomaly detection tools** that can be directly dragged and dropped, allowing anyone to easily turn their experience into workflows, laying the foundation for future autonomous agents.
 
+![select-tools](/img/select-tools.png)
+![charts-verifiability](/img/charts-verifiability.png)
 For example, if you have your own "ten-step method for troubleshooting database performance issues," you can simply drag and drop these steps through an intuitive visual interface, add conditional logic like "if there are more than 10 slow queries, collect index usage information," and let the large language model decide the next steps based on the actual situation. This transforms your expertise into automated workflows.
 
 APO's predefined workflows are built on this platform, and each workflow can be modified according to actual scenarios, truly integrating workflows into your operational processes.
@@ -53,6 +56,7 @@ The core capabilities of **Agentic workflows** depend on effective data utilizat
 
 The horizontal design of this data foundation allows AI Agents to quickly grasp the system overview and immediately locate abnormal components. The vertical design enables them to dig deeper along problem clues, tracing back to root causes. For example, when service latency is detected, AI Agents can use the horizontal view to identify the problematic service, then use vertical data to trace the specific cause, analyzing layer by layer from container to host, from application to middleware, until reaching the core of the problem.
 
+![service-map-events](/img/service-map-events.png)
 APO provides built-in collection tools that can build this data plane through **one-click installation and deployment**. For users already using other collection tools, APO also **supports seamless integration with existing data sources**, allowing users to use this revolutionary data plane without modifying their systems. This innovative design provides intelligent agents with an efficient, structured data foundation, enabling AI to truly understand system behavior and make precise decisions.
 
 ![data-integration](/img/data-integration.png)
