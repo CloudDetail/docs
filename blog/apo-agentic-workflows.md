@@ -38,7 +38,7 @@ Think about that experienced IT operations expert on your team who always quickl
 ![workflows-list](/img/workflows-list.png)
 Each system environment is unique, and predefined workflows cannot cover all scenarios. Therefore, APO has built a **workflow orchestration platform** specifically for observability. Based on the popular and user-friendly AI tool Dify, APO provides a series of **data query and anomaly detection tools** that can be directly dragged and dropped, allowing anyone to easily turn their experience into workflows, laying the foundation for future autonomous agents.
 
-![select-tools](/img/select-tools.png)
+![select-tools](/img/apo-select-tools.png)
 ![charts-verifiability](/img/charts-verifiability.png)
 For example, if you have your own "ten-step method for troubleshooting database performance issues," you can simply drag and drop these steps through an intuitive visual interface, add conditional logic like "if there are more than 10 slow queries, collect index usage information," and let the large language model decide the next steps based on the actual situation. This transforms your expertise into automated workflows.
 
