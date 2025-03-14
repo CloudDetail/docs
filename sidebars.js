@@ -65,6 +65,8 @@ const sidebars = {
             'Installation/Advanced/Integrate with Existing Clickhouse',
             'Installation/Advanced/Integrate with Existing VictoriaMetrics',
             'Installation/Advanced/Replace OneAgent Otel Probe with Custom Tracing Probe',
+            'Installation/Advanced/Integrate with Existing Observability Data',
+            'Installation/Advanced/Detailed Explanation of Observability Data Ingestion',
           ],
         },
         {
@@ -90,6 +92,7 @@ const sidebars = {
       collapsed: false,
       items: [
         'Distibuted Tracing/Modify Automatic Injection Scope',
+        'Distibuted Tracing/Trace Sampling Configuration',
       ],
     },
     {
