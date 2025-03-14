@@ -69,10 +69,6 @@ Please add the **trace system type** you are using to the `apm_list` according t
 
 Note that after installing the APO Server in this mode, you need to use the `trace-sidecar` mode when installing the APO OneAgent. For details, see the [APO OneAgent Installation and Configuration Guide](#apo-oneagent-installation-and-configuration-guide).
 
-:::info
-For the limitations and effects of this installation solution, please refer to the document [Trace Integration Solution One](/docs/APO%20向导式可观测性中心/企业版相关/数据接入能力详细说明#接入方案一使用现有探针apo-对接链路追踪查询-api)
-:::
-
 ### Integrating Existing Metric Data
 If you wish to view existing metrics on the APO platform, please use an existing Prometheus-like system as the metric storage system when installing the APO Server. Adjust the configuration file as shown below:
 
@@ -134,7 +130,7 @@ By combining and adjusting the options in `agentCollectorMode`, various usage sc
 Please fill in
 + Include `trace`: Install the Tracing probe auto-injection tool, suitable for scenarios **without prior use** of Tracing probes.
 + Include `trace-sidecar`: Suitable for scenarios where Tracing probes are already in use and **do not wish to modify** the Traces data sending address. The Traces data address needs to be configured when installing the APO Server.
-+ Include `trace-collector`: Suitable for scenarios where Tracing probes are already in use and **can modify** the Traces data sending address. The data sending address of the existing probe needs to be modified. For details, see [Trace Integration Plan Two](/docs/APO%20Wizard-Observability%20Center/Enterprise%20Edition%20Related/Detailed%20Data%20Access%20Capabilities#Access%20Plan%20Two%20Using%20Existing%20Probes%20to%20Send%20Trace%20Data%20to%20APO).
++ Include `trace-collector`: Suitable for scenarios where Tracing probes are already in use and **can modify** the Traces data sending address. The data sending address of the existing probe needs to be modified. 
 + Exclude `trace`, `trace-sidecar`, and `trace-collector`: Suitable for scenarios where Traces and application request metrics are not required.
 
 ### Metrics-related
