@@ -25,3 +25,28 @@
   --ifm-color-primary-lighter: #bfd4ff;
   --ifm-color-primary-lightest: #f9fbff;
 }
+
+.blog-wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.blog-wrapper aside {
+  padding-left: 0;
+  width: 200px !important; 
+}
+
+.blog-wrapper article {
+  max-width: 95%;  
+  margin: 0 auto;
+}
+
+.blog-wrapper .container {
+  max-width: 100%;
+  padding: 0 3rem;  
+}
+
+.blog-wrapper .col--3 {
+  padding-left: 0;
+  flex: 0 0 300px !important; 
+}
