@@ -31,26 +31,13 @@ helm repo update apo
 Create a file named `apo-values.yaml` and define it according to your requirements, then mount the configuration during the deployment phase.
 ```yaml
 # APO-server configuration
-# Persistent configuration, recommended to enable, default is false
-# If persistent configuration is enabled, create PV for the component based on PVC
 global:
-  baseURL: "http://xxx.xxx.xxx.xxx"  # FIXME, Change this to the IP address or domain name used to access the APO-server via a web browser. No port number is required. It must be the same as the node where apo-dify’s hostPath is located
+  baseURL: "http://10.1.2.3:31364"  # FIXME, Change this to the IP address or domain name used to access the APO-server via a web browser. 
 
-altinity-clickhouse-operator:
-  clickhouse:
-    persistence:
-      enabled: true
-victoria-metrics-single:
-  server:
-    persistentVolume:
-      enabled: true
-apo-backend:
-  persistence: 
+  # Recommended to enable, default is false
+  # If enabled, you need to create PVs for the components based on PVCs
+  persistence:
     enabled: true
-apo-dify:
-  hostPath: "/data/apo/dify"
-  nodeSelector:
-    kubernetes.io/hostname: <NODENAME>   # FIXME, The node name specified in hostPath for apo-dify.
 ```
 
 ## Deploying APO Helm Charts
